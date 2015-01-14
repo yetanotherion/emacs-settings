@@ -82,7 +82,6 @@
 (defun progmodesbis-hook ()
   (add-hook 'before-save-hook 'progmodes-write-hooks-and-delete-trailing))
 
-(add-to-list 'load-path "~/.emacs.d/")
 (add-hook 'python-mode-hook 'progmodes-hook)
 (add-hook 'yaml-mode-hook 'progmodesbis-hook)
 (add-hook 'rst-mode-hook 'progmodes-hook)
@@ -109,11 +108,6 @@
 ;; font size
 (set-face-attribute 'default nil :height 101)
 
-(require 'edit-server)
-(edit-server-start)
-(require 'mediawiki)
 
-(setq edit-server-url-major-mode-alist
-      '(("umgwiki\\.intel\\.com" . mediawiki-mode)))
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (load-file "/usr/share/emacs/site-lisp/proofgeneral/generic/proof-site.el")
